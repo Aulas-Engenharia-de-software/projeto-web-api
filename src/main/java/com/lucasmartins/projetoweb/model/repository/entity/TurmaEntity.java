@@ -55,4 +55,12 @@ public class TurmaEntity {
     public void setPeriodo(String periodo) {
         this.periodo = periodo;
     }
+
+    public List<AlunoEntity> getAlunos() {
+        return alunos;
+    }
+
+    public void setAlunos(List<AlunoEntity> alunos) {
+        this.alunos = alunos;
+    }
 }

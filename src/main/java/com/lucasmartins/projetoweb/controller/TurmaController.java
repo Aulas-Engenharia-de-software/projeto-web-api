@@ -23,7 +23,13 @@ public class TurmaController {
 
     @GetMapping("/{turmaId}")
     @ResponseStatus(code = HttpStatus.OK)
-    public TurmaDto buscarTurma(@PathVariable int turmaId) {
+    public TurmaDto buscarTurmaPorId(@PathVariable int turmaId) {
         return turmaService.findById(turmaId);
+    }
+
+    @GetMapping("/nome/{nome}")
+    @ResponseStatus(code = HttpStatus.OK)
+    public TurmaDto buscarTurmaPorNome(@PathVariable String nome) {
+        return turmaService.findByNome(nome);
     }
 }
